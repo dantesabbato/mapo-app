@@ -1,0 +1,39 @@
+@import "../../assets/styles/colours"
+
+.vacancy_card
+  padding: 1.5em 2rem
+  border-radius: 35px
+  width: 50em
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(91, 26, 74, 0.8)), url("../images/vacancy_card.jpg")
+  background-size: cover
+  background-position: center
+  color: white
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px
+  &__title
+    display: flex
+    justify-content: space-between
+    padding: 0.7em 0
+    h3
+      text-transform: uppercase
+      font-family: OswaldBold, sans-serif
+    i
+      font-size: 1.7em
+      cursor: pointer
+      &:hover
+        color: $violet
+  .contacts
+    display: none
+  &.pdf
+    border-radius: 0
+    .contacts
+      display: flex
+      justify-content: space-between
+      a
+        font-size: 1.2em
+        text-decoration: none
+        color: $violet
+      i
+        margin-right: .5em
+        line-height: 1em
+    .bi-filetype-pdf
+      display: none

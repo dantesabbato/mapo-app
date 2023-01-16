@@ -1,0 +1,41 @@
+.tags
+  margin: 4vh 0
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr 1fr
+
+.tag
+  flex-grow: 1
+  margin: 5px
+  border-radius: 35px
+  background-color: rgb(240, 240, 240)
+  transition-property: all
+  transition-duration: 300ms
+  transition-delay: 0ms
+  transition-timing-function: ease
+  padding: 15px 20px
+  &:hover
+    background-color: rgba(255, 255, 255, 0)
+    transform: translate3D(0px, -5px, 0px)
+    border-radius: 25px
+  a
+    width: 100%
+    cursor: pointer
+    text-decoration-line: none
+  &__body
+    display: flex
+    align-items: center
+  &__image
+    width: 15px
+    height: 15px
+    background-color: rgba(116, 195, 61, 1)
+    border-radius: 55px
+    border-width: 0
+    box-shadow: 0 5px 15px -3px rgb(116 195 61)
+    margin: 0 15px 0 0
+    font-size: 13px
+  &__text
+    text-align: left
+    color: rgba(15, 9, 29, 1)
+    font-family: OswaldRegular, sans-serif
+    font-size: 13px
+    text-transform: uppercase

@@ -1,0 +1,134 @@
+@import "../../assets/styles/colours"
+
+#education
+  .accordion
+    --bs-accordion-border-width: 0
+    --bs-accordion-btn-focus-border-color: none
+    --bs-accordion-btn-focus-box-shadow: none
+    --bs-accordion-active-color: none
+    margin-bottom: 2em
+    &-item, .expand_button
+      border-radius: 22px
+      margin-bottom: 0.3em
+      border: 2px solid rgb(158, 122, 249)
+      width: 100%
+    &-button
+      border-radius: 22px
+      background-color: whitesmoke
+      color: gray
+      border: none
+      font-weight: bold
+      padding: .3em
+      &:not(.collapsed)
+        background-color: $violet
+        border-bottom-left-radius: 0
+        border-bottom-right-radius: 0
+        border-top-left-radius: 16px
+        border-top-right-radius: 16px
+        color: white
+      &:hover
+        background-color: $violet
+        color: white
+    &-body
+      background-color: whitesmoke
+      border-bottom-left-radius: 20px
+      border-bottom-right-radius: 20px
+      padding-top: .3em
+      padding-right: 0
+      padding-left: 0
+    .expand_button
+      display: flex
+      align-items: center
+      flex-direction: column
+      background-color: whitesmoke
+      color: $violet
+      font-weight: bold
+      &:hover
+        background-color: $violet
+        color: white
+      span i
+        margin-left: .6em
+
+  .columns
+    display: grid
+    grid-template-columns: 10% 70% 10% 10%
+    border-bottom: 5px solid white
+    &:last-child
+      border: none
+    &-header
+      background-color: whitesmoke
+      font-weight: bold
+      padding: .3em 0
+      color: $violet
+    .column:not(:nth-child(2))
+      text-align: center
+
+  table
+    td
+      font-weight: bold
+      padding: 0
+    td:first-child
+      border-left: 3px solid #f0f0f0
+    td:nth-child(2)
+      text-align: left
+    th:nth-child(2)
+      width: 90%
+    th:nth-child(3), th:nth-child(3)
+      width: 5%
+
+  h1
+    font-family: OswaldMedium, sans-serif
+    text-transform: uppercase
+    font-size: 2.2rem
+    color: rgba(158, 122, 249, 1)
+
+  h3
+    text-transform: uppercase
+    font-family: OswaldBold, sans-serif
+    margin: 0.7em 0
+
+  .cards
+    display: flex
+    margin: 50px 0
+    padding-bottom: 30px
+    justify-content: center
+    .card
+      background-color: rgb(240, 240, 240)
+      width: 20%
+      &-text
+        color: #858585
+  .content
+    margin: 50px 0
+  .header
+    height: 10vh
+    background-image: linear-gradient(rgba(158, 122, 249, 0.8) 0%, rgba(158, 122, 249, 0.8) 100%), url('~@/assets/images/backgrounds/books.png')
+    color: white
+    font-family: OswaldSemiBold, sans-serif
+    font-weight: bold
+    text-transform: uppercase
+    .container
+      height: 100%
+      display: flex
+      justify-content: space-between
+      align-items: center
+    &__title
+      font-size: 2.2rem
+
+  #contacts_button
+    background-color: transparent
+    a
+      font-family: OswaldSemiBold, sans-serif
+      color: white
+      font-size: 2rem
+    img
+      filter: invert(1)
+    .link-login
+      background-color: white
+
+  .cards
+    padding-bottom: 30px
+    grid-template-columns: 1fr 1fr 1fr
+    .card
+      background-color: rgb(240, 240, 240)
+      &-text
+        color: #858585

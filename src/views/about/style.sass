@@ -1,0 +1,112 @@
+#about
+  color: rgba(74, 74, 74, 1)
+  .header
+    height: 10vh
+    background-image: linear-gradient(rgba(158, 122, 249, 0.8) 0%, rgba(158, 122, 249, 0.8) 100%), url('~@/assets/images/backgrounds/books.png')
+    color: white
+    font-family: OswaldSemiBold, sans-serif
+    font-weight: bold
+    text-transform: uppercase
+    .container
+      height: 100%
+      display: flex
+      justify-content: space-between
+      align-items: center
+    &__title
+      font-size: 2vw
+    &__subtitle
+      font-size: 1vw
+      align-items: end
+
+  #contacts_button
+    background-color: transparent
+    a
+      color: white
+      font-size: 3.4vh
+    img
+      filter: invert(1)
+    .link-login
+      background-color: white
+
+  .content
+    margin: 4vh 0
+
+  p, li
+    text-align: justify
+
+  a
+    color: rgba(158, 122, 249, 1)
+    font-weight: bold
+
+  h1
+    font-family: OswaldMedium, sans-serif
+    margin-top: 4vh
+    text-transform: uppercase
+    font-size: 2vw
+    color: rgba(158, 122, 249, 1)
+
+  h2
+    font-family: MontserratExtraBold, sans-serif
+    text-align: center
+
+  h4
+    font-weight: bold
+    margin-top: 30px
+    color: rgba(158, 122, 249, 1)
+
+  .table
+    border: 1px solid #f0f0f0
+    border-collapse: separate
+    border-left: 0
+    border-radius: 35px
+    border-spacing: 0
+    thead
+      display: table-header-group
+      vertical-align: middle
+      border-color: inherit
+      border-collapse: separate
+    tr
+      display: table-row
+      vertical-align: inherit
+      border-color: inherit
+    th, td
+      padding: 3px 20px
+      text-align: center
+      vertical-align: center
+    td
+      border-top: 1px solid #f0f0f0
+    th
+      background-color: #f0f0f0
+    thead:first-child tr:first-child th:first-child, tbody:first-child tr:first-child td:first-child
+      border-radius: 35px 0 0 0
+    tbody:last-child tr:last-child td:first-child
+      border-radius: 0 0 0 35px
+    thead:first-child tr:first-child th:last-child
+      border-radius: 0 35px 0 0
+    td:first-child
+      border-left: 1px solid #f0f0f0
+    ul, ol
+      margin-left: 40px
+    &_twoculomns
+      th:nth-child(1)
+        width: 60%
+      th:nth-child(2)
+        width: 40%
+    &_entries
+      width: fit-content
+      tbody:first-child tr:first-child th:first-child, tbody:first-child tr:first-child td:first-child
+        border-radius: 35px 0 0 0
+      tbody:first-child tr:last-child th:first-child
+        border-radius: 0 0 0 35px
+      tbody:first-child tr:first-child td
+        border-top: 0
+      td
+        text-align: start
+
+  .carousel__prev .carousel__icon
+    transform: translate(-3vw, 0) scale(3)
+    fill: #8064a2
+
+  .carousel__next .carousel__icon
+    transform: translate(3vw, 0) scale(3)
+    fill: #8064a2

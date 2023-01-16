@@ -1,0 +1,96 @@
+@import "../../assets/styles/colours"
+
+.table_programs
+  border: 3px solid #f0f0f0
+  border-collapse: separate
+  border-left: 0
+  border-radius: 35px
+  border-spacing: 0
+  thead
+    display: table-header-group
+    vertical-align: middle
+    border-color: inherit
+    border-collapse: separate
+  tr
+    display: table-row
+    vertical-align: inherit
+    border-color: inherit
+  th, td
+    text-align: center
+    vertical-align: middle
+  td
+    border-top: 3px solid #f0f0f0
+    padding: 20px 1vw
+    font-size: 1rem
+  th
+    background-color: #f0f0f0
+    padding: .5vh 1vw
+    font-size: .8rem
+    color: #717171
+  tbody tr:first-child th:first-child, tbody:first-child tr:first-child td:first-child
+    border-radius: 35px 0 0 0
+  tbody tr:last-child th:first-child
+    border-radius: 0 0 0 35px
+  tbody tr:first-child th:last-child
+    border-radius: 0 35px 0 0
+  ul, ol
+    margin-left: 40px
+
+  th:nth-child(1)
+    width: 5%
+  th:nth-child(2)
+    width: 35%
+  th:nth-child(3)
+    width: 10%
+  th:nth-child(4)
+    width: 10%
+  th:nth-child(5)
+    width: 10%
+  th:nth-child(6)
+    width: 10%
+  th:nth-child(7)
+    width: 10%
+  th:nth-child(8)
+    width: 10%
+
+  img
+    background-color: #6a6a6a30
+    transition: width 1s, height 1s, transform 1s
+
+  img:hover
+    cursor: zoom-in
+    height: 220
+
+  a img:hover
+    cursor: pointer
+
+  .cascade
+    width: auto
+    display: flex
+    margin-left: 5em
+    img
+      margin-left: -70px
+      cursor: zoom-in
+      &:nth-child(1)
+        z-index: 300
+      &:nth-child(2)
+        z-index: 200
+        margin-top: 10px
+      &:nth-child(3)
+        z-index: 100
+        margin-top: 20px
+
+.expand_button
+  background-color: #f0f0f0
+  color: $violet
+  cursor: pointer
+  font-weight: bold
+  td
+    border-bottom-left-radius: 30px
+    border-bottom-right-radius: 30px
+    padding: .5em
+    &:hover
+      background-color: whitesmoke
+  span
+    font-size: .8rem
+    margin-right: .5em

@@ -1,0 +1,453 @@
+.background-main
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  display: inline-block
+  overflow-x: hidden
+  overflow-y: hidden
+  z-index: -1
+  background-position: top
+  background-repeat: no-repeat
+  background-size: cover
+  position: fixed
+  //box-shadow: inset 0 -90px 66px -15px #ffffff
+  &.day
+    //background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url('~@/assets/images/backgrounds/morningcity.png')
+    //background-image: linear-gradient(to bottom, rgba(38, 19, 51, 0.59) 17%, rgba(255, 255, 255, 0) 72%), url('~@/assets/images/backgrounds/morningcity.png')
+    background-image: linear-gradient(to right, rgba(38, 19, 51, 0.59) 17%, rgba(255, 255, 255, 0) 72%), url('~@/assets/images/backgrounds/morningcity.png')
+  &.night
+    //background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url('~@/assets/images/backgrounds/nightcity.png')
+    background-image: linear-gradient(to right, rgba(38, 19, 51, 0.59) 17%, rgba(255, 255, 255, 0) 72%), url('~@/assets/images/backgrounds/nightcity.png')
+
+.banner
+  height: 95vh
+  padding-top: 3vh
+  &__up
+    display: flex
+    justify-content: space-between
+    margin-bottom: 4vh
+  &__down
+    display: flex
+    flex-direction: column
+    height: 60vh
+    justify-content: space-between
+    .block
+      height: 100%
+      //justify-content: center
+      justify-content: start
+      display: flex
+      flex-direction: column
+      font-family: MontserratExtraLight, sans-serif
+      color: rgba(255, 255, 255, 1)
+      .circle
+        width: 70px
+        height: 70px
+        background-color: #55d083
+        border-radius: 555px
+        margin: 8px 0 -59px 0
+        z-index: -1
+      &__up
+        font-size: 7vh
+        line-height: 5vh
+        margin: 8px 0
+        text-transform: none
+        justify-content: center
+      &__middle
+        //font-size: 5vw
+        font-size: 3vw
+        line-height: 4vw
+        text-transform: uppercase
+        font-family: OswaldBold, sans-serif
+      &__down
+        font-size: 7vh
+        line-height: 5vw
+        text-transform: uppercase
+
+.banner_buttons
+  display: flex
+  flex-direction: column
+  width: fit-content
+
+.banner_cards
+  .head
+    display: flex
+    flex-direction: row-reverse
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 7vh
+    &__title
+      font-size: 3vw
+      line-height: 3vw
+      color: white
+      font-family: OswaldMedium, sans-serif
+      text-transform: uppercase
+      padding-right: 4vw
+      white-space: nowrap
+    &__spans
+      display: flex
+      padding-left: 4vw
+      align-items: center
+      justify-content: flex-start
+      &__words
+        display: flex
+        flex-direction: column
+        span
+          &:nth-child(1)
+            font-size: 1.1vw
+            line-height: 1.7vw
+            color: rgb(255, 255, 255)
+            font-family: MontserratBold, sans-serif
+          &:nth-child(2)
+            font-size: .9vw
+            color: rgb(255, 255, 255)
+            font-family: MontserratRegular, sans-serif
+
+  .card
+    background-color: rgb(255 255 255 / 26%)
+    backdrop-filter: blur(10px)
+    &-text
+      color: white
+      font-weight: normal
+
+.banner_logo
+  display: flex
+  height: fit-content
+
+.banner_image
+  background-color: rgba(158, 122, 249, 1)
+  height: 120px
+  width: 120px
+  border-radius: 120px
+  position: relative
+  img
+    position: absolute
+    top: -16px
+    left: -20px
+
+.banner_title
+  font-size: 1.5vw
+  color: white
+  line-height: 1.9vw
+  padding-left: 15px
+  font-family: OswaldMedium, sans-serif
+  display: flex
+  align-items: center
+
+.btn-toolbar
+  display: flex
+  justify-content: flex-end
+
+.btn-toolbar button
+  height: 50px
+  font-size: .8em
+  border-radius: 30px
+  margin-right: 10px
+
+.btn-toolbar button i
+  font-size: 2em
+
+.request_button
+  display: flex
+  padding: 16px 35px
+  font-size: 15px
+  line-height: normal
+  background-color: rgba(116, 195, 61, 0)
+  color: rgb(255, 255, 255)
+  border-radius: 55px
+  background-image: radial-gradient(at left bottom, rgb(85, 209, 131) -2%, rgb(85, 209, 131) 100%)
+  background-repeat: no-repeat
+  background-position: left 0 top 0
+  background-size: auto
+  background-attachment: scroll
+  transition-property: all
+  transition-duration: 300ms
+  transition-delay: 0ms
+  transition-timing-function: ease
+  border-style: solid
+  border-width: 0
+  box-shadow: 0 10px 30px 0 rgb(85 209 131)
+  text-transform: uppercase
+  font-weight: 800
+  flex-shrink: 0
+  align-items: center
+  width: 100%
+  margin-top: 2vh
+  &:hover
+    opacity: 1
+    background-color: rgba(85, 209, 131, 1)
+    color: rgba(255, 255, 255, 1)
+    background-image: none
+    background-repeat: repeat
+    background-position: 0 0
+    background-size: auto
+    background-attachment: scroll
+    box-shadow: 0 0 35px 1px rgba(85, 209, 131, 1)
+  img
+    color: white
+    margin-right: 15px
+  span
+    text-align: left
+    color: rgba(255, 255, 255, 1)
+    text-shadow: none
+    font-family: Oswald, sans-serif
+    font-size: 19px
+    display: block
+    letter-spacing: 0
+    line-height: 18px
+    b
+      font-family: OswaldBold, sans-serif
+
+.path-ix4wzatgw
+  fill: rgba(255, 255, 255, 1)
+
+.about
+  background-color: rgb(240, 240, 240, 1)
+  width: 100%
+  padding-bottom: 125px
+  padding-top: 90px
+  &__up
+    display: flex
+    align-items: center
+    img
+      object-fit: cover
+      width: 25vw
+      height: 400px
+      flex-shrink: 0
+      border-radius: 35px
+      margin-right: 5%
+    .content
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      h1
+        font-family: OswaldRegular, sans-serif
+        font-size: 45px
+        margin-bottom: 0
+        margin-top: 0
+      span
+        font-size: 1.5em
+        color: rgba(158, 122, 249, 1)
+        margin-bottom: 15px
+        font-family: MontserratRegular, sans-serif
+      p
+        color: rgba(74, 74, 74, 1)
+        font-weight: 300
+        text-align: justify
+      a
+        padding: 15px 25px
+        font-family: Montserrat, sans-serif
+        background-color: rgba(116, 195, 61, 0)
+        color: rgba(8, 17, 34, 1)
+        text-decoration-line: none
+        margin-top: 15px
+        border-radius: 555px
+        transition-property: all
+        transition-duration: 300ms
+        transition-delay: 0ms
+        transition-timing-function: ease
+        border-color: rgba(158, 122, 249, 1)
+        box-shadow: inset 0px 0px 0px 1px rgb(85 209 131)
+        &:hover
+          background-color: rgba(85, 209, 131, 1)
+          color: rgba(255, 255, 255, 1)
+
+.feedback
+  background-image: linear-gradient(rgb(219 205 255 / 80%) 0%, rgba(158, 122, 249, 0.8) 100%)
+  backdrop-filter: blur(3px)
+  .container
+    display: flex
+    flex-direction: row
+    padding-top: 90px
+    padding-bottom: 90px
+  &__right
+    width: 450px
+    margin-top: -198px
+    flex-shrink: 0
+    margin-left: 28px
+    padding: 50px
+    border-radius: 35px
+    background-color: rgba(255, 255, 255, 1)
+    box-shadow: 0 0 55px 1px rgb(0 0 0 / 12%)
+    form
+      span
+        font-size: 41px
+        line-height: 41px
+        margin: 0 auto 19px auto
+        text-align: center
+        font-weight: 700
+        font-family: OswaldBold, sans-serif
+        color: rgb(8, 17, 34)
+        text-transform: uppercase
+        display: block
+      input[type=text]
+        margin-bottom: 10px
+        font-size: 14px
+        width: 100%
+        border: 0 solid rgba(255, 255, 255, 1)
+        padding: 25px
+        background-color: rgba(238, 238, 238, 0)
+        transition-property: all
+        transition-duration: 300ms
+        transition-delay: 0ms
+        transition-timing-function: ease
+        border-radius: 55px
+        color: rgba(69, 69, 69, 1)
+        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.12)
+        min-height: 75px
+        font-family: Montserrat, sans-serif
+        outline-style: none
+        &:focus
+          box-shadow: inset 0 -3px 0 0 rgb(116, 195, 61)
+        &:active
+          box-shadow: inset 0 0 7px 0 rgba(0, 0, 0, 0.25)
+        &:focus-visible
+          outline-offset: 0
+      button
+        padding: 22px 25px
+        font-family: OswaldBold, sans-serif
+        font-size: 19px
+        line-height: normal
+        background-color: rgba(85, 209, 131, 1)
+        color: rgba(255, 255, 255, 1)
+        border-style: none
+        margin-left: auto
+        margin-right: auto
+        border-radius: 55px
+        text-transform: uppercase
+        font-weight: 700
+        margin-bottom: 10px
+        min-height: 55px
+        display: block
+      label
+        color: rgba(174, 174, 174, 1)
+        font-size: 15px
+        font-family: Montserrat, sans-serif
+        margin-top: 5px
+        line-height: normal
+        text-align: center
+  &__left
+    display: inline-flex
+    background-color: rgba(242, 242, 242, 0)
+    align-items: center
+    img
+      flex-shrink: 0
+      margin-right: 32px
+      margin-bottom: 14px
+    &-words
+      padding-left: 35px
+      border-left-style: solid
+      border-left-width: 5px
+      border-left-color: rgba(255, 255, 255, 1)
+      span
+        &.first
+          display: flex
+          font-size: 1.5vw
+          line-height: normal
+          vertical-align: top
+          color: rgba(255, 255, 255, 1)
+          font-weight: 300
+          font-family: MontserratLight, sans-serif
+          text-transform: uppercase
+          margin-bottom: 5px
+        &.second
+          font-size: 3.8vw
+          line-height: 3.8vw
+          position: relative
+          color: rgba(255, 255, 255, 1)
+          font-weight: 700
+          font-family: OswaldSemiBold, sans-serif
+          text-transform: uppercase
+        &.third
+          display: flex
+          font-size: 1.5vw
+          line-height: normal
+          color: rgba(255, 255, 255, 1)
+          font-weight: 300
+          font-family: MontserratLight, sans-serif
+
+.mention
+  background: white
+  padding: 90px 0
+  h1
+    font-family: OswaldSemiBold, sans-serif
+    margin-bottom: 2px
+    text-transform: uppercase
+    font-size: 4vw
+  h4
+    color: rgba(158, 122, 249, 1)
+    margin-bottom: 90px
+    font-family: MontserratExtraLight, sans-serif
+  .carousel__track
+    padding-bottom: 27px
+  .carousel__control
+    button
+      width: 55px
+      height: 55px
+      background-image: radial-gradient(at right bottom, rgba(116, 195, 61, 1) 0%, rgba(85, 209, 131, 1) 100%)
+      border: solid 1px white
+      &:nth-child(1)
+        border-radius: 55px 0 0 55px
+      &:nth-child(2)
+        border-radius: 0 55px 55px 0
+      i
+        color: white
+        font-size: 2.2em
+  .comment_card
+    width: 400px
+    &__body
+      display: flex
+      padding: 0 35px 35px
+      border-radius: 35px
+      background-color: rgba(240, 240, 240, 1)
+      border-style: solid
+      border-width: 0
+      align-items: flex-start
+      flex-direction: column
+      box-shadow: inset 0 0 0 5px rgb(232 232 232 / 10%)
+    &__avatar
+      display: flex
+      border-radius: 555px
+      box-shadow: 0 0 0 10px rgb(255 255 255)
+      margin: -36px 15px 22px 0
+      align-items: center
+      & span
+        height: 70px
+        width: 70px
+        border-radius: 35px 0 0 35px
+        background-color: rgba(158, 122, 249, 1)
+        padding: 20px
+        & img
+          width: 100%
+          height: 100%
+      img
+        overflow-x: hidden
+        overflow-y: hidden
+        width: 70px
+        height: 70px
+        border-radius: 0 55px 55px 0
+        transform: none
+        transition-property: all
+        transition-duration: 0s
+        transition-delay: 0s
+        transition-timing-function: ease
+    &__content
+      text-align: left
+      color: rgba(66, 66, 66, 1)
+      max-width: 100%
+      font-family: "Open Sans", sans-serif
+      font-weight: 300
+      font-size: 14px
+    &__footer
+      width: 100%
+      margin-top: 27px
+      font-family: OswaldRegular, sans-serif
+      color: rgba(15, 9, 29, 1)
+      font-size: 17px
+      display: flex
+      flex-direction: column
+      span:nth-child(2)
+        font-weight: bolder
+//
+//.services
+//  .cards

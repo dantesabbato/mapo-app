@@ -1,0 +1,80 @@
+.navbar
+  height: 55px
+  background-color: white
+  font-family: "OswaldMedium", sans-serif
+  font-size: 15px
+  text-transform: uppercase
+  letter-spacing: 7px
+  &-nav
+    flex: 1
+    margin: auto
+    justify-content: space-between
+    list-style: none
+
+.nav
+  &-item
+    &:hover .dropdown-menu
+      display: block
+  &-subitem
+    &:hover .dropdown-submenu
+      display: block
+
+.nav-item
+  .dropdown
+    &-menu
+      position: absolute
+      z-index: 10
+      list-style: none
+      background-color: rgb(9 9 27 / 60%)
+      width: fit-content
+      padding: 25px
+      display: none
+      border-radius: 35px
+      left: -35px
+      backdrop-filter: blur(10px)
+    &-submenu
+      position: absolute
+      z-index: 10
+      list-style: none
+      background-color: rgb(9 9 27 / 60%)
+      width: fit-content
+      padding: 25px
+      display: none
+      border-radius: 35px
+      left: 100%
+      right: 0
+      top: -22px
+      backdrop-filter: blur(10px)
+    &-item
+      background-color: rgba(221, 221, 221, 0)
+      font-size: 17px
+      padding-bottom: 10px
+      padding-top: 10px
+      font-family: OswaldRegular, sans-serif
+      color: rgba(255, 255, 255, 1)
+      transition-property: all
+      transition-duration: 750ms
+      transition-delay: 0ms
+      transition-timing-function: ease
+      text-transform: none
+      border-radius: 35px
+      letter-spacing: 0
+      display: flex
+      justify-content: space-between
+
+.viv_button
+  border-radius: 35px!important
+  text-transform: uppercase
+  display: flex!important
+  flex-direction: row
+  padding: .4em .8em .4em 4em  !important
+  align-items: center
+  position: relative
+  span
+    font-size: .7em !important
+    line-height: 1.2em
+  i
+    left: .3em
+    top: -.32em
+    font-size: 2.5em
+    position: absolute

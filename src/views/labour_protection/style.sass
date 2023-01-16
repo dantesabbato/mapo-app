@@ -1,0 +1,134 @@
+#labour_protection
+  h1
+    font-family: OswaldMedium, sans-serif
+    text-transform: uppercase
+    font-size: 2.2rem
+    color: rgba(158, 122, 249, 1)
+  .cards
+    margin: 50px 0
+  .content
+    margin: 50px 0
+  .header
+    height: 10vh
+    background-image: linear-gradient(rgba(158, 122, 249, 0.8) 0%, rgba(158, 122, 249, 0.8) 100%), url('~@/assets/images/backgrounds/books.png')
+    color: white
+    font-family: OswaldSemiBold, sans-serif
+    font-weight: bold
+    text-transform: uppercase
+    .container
+      height: 100%
+      display: flex
+      justify-content: space-between
+      align-items: center
+    &__title
+      font-size: 2.2rem
+
+  #contacts_button
+    background-color: transparent
+    a
+      font-family: OswaldSemiBold, sans-serif
+      color: white
+      font-size: 2rem
+    img
+      filter: invert(1)
+    .link-login
+      background-color: white
+
+  .cards
+    padding-bottom: 30px
+    grid-template-columns: 1fr 1fr 1fr
+    .card
+      background-color: rgb(240, 240, 240)
+      &-text
+        color: #858585
+
+  &-first_aid_training
+    table
+      thead
+        font-size: 10px
+      thead, tbody
+        font-weight: bold
+        vertical-align: middle
+        text-align: center
+      th:nth-child(2)
+        width: 40%
+      th:nth-child(3)
+        width: 8%
+      th:nth-child(4)
+        width: 10%
+      th:nth-child(5)
+        width: 10%
+      th:nth-child(6)
+        width: 20%
+      img
+        cursor: zoom-in
+
+  .table
+    border: 3px solid #f0f0f0
+    border-collapse: separate
+    border-left: 0
+    border-radius: 35px
+    border-spacing: 0
+    thead
+      display: table-header-group
+      vertical-align: middle
+      border-color: inherit
+      border-collapse: separate
+    tr
+      display: table-row
+      vertical-align: inherit
+      border-color: inherit
+    th, td
+      text-align: center
+      vertical-align: middle
+    td
+      border-top: 3px solid #f0f0f0
+    th
+      background-color: #f0f0f0
+    thead:first-child tr:first-child th:first-child, tbody:first-child tr:first-child td:first-child
+      border-radius: 35px 0 0 0
+    tbody:last-child tr:last-child td:first-child
+      border-radius: 0 0 0 35px
+    thead:first-child tr:first-child th:last-child
+      border-radius: 0 35px 0 0
+    td:first-child
+      border-left: 3px solid #f0f0f0
+    ul, ol
+      margin-left: 40px
+    &_programs
+      td
+        font-weight: bold
+    &_twoculomns
+      th:nth-child(1)
+        width: 60%
+      th:nth-child(2)
+        width: 40%
+    &_entries
+      width: fit-content
+      tbody:first-child tr:first-child th:first-child, tbody:first-child tr:first-child td:first-child
+        border-radius: 35px 0 0 0
+      tbody:first-child tr:last-child th:first-child
+        border-radius: 0 0 0 35px
+      tbody:first-child tr:first-child td
+        border-top: 0
+      td
+        text-align: start
+    &_requirements
+      tbody tr th
+        border-bottom: 3px white solid
+      tbody tr:last-child th, tbody tr:first-child th
+        border: 3px solid #f0f0f0
+        border-radius: 0 35px 0 0
+      tbody:first-child tr:first-child th:first-child, tbody:first-child tr:first-child td:first-child
+        border-radius: 35px 0 0 0
+      tbody:first-child tr:last-child th:first-child
+        border-radius: 0 0 0 35px
+      tbody:first-child tr:first-child td
+        border-top: 0
+      td
+        text-align: start
+    &_briefing
+      td:nth-child(2)
+        text-align: justify
+        ul
+          margin-left: 0

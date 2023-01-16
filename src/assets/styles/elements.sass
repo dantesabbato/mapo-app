@@ -1,0 +1,53 @@
+//html
+//  height: 100%
+//  overflow: hidden
+
+//body
+  //overflow-y: scroll
+
+.photos
+  width: 100%
+  margin: 50px 0
+  display: grid
+  grid-template-columns: auto auto auto
+  gap: 2vw
+  &_four
+    grid-template-columns: auto auto auto auto
+  .photo
+    border-radius: 35px
+
+.doc-cascade
+  display: flex
+  justify-content: center
+  margin-top: 60px
+  margin-left: 200px
+  img
+    background-color: white
+    margin-left: -200px
+    cursor: zoom-in
+    &:nth-child(1)
+      z-index: 300
+    &:nth-child(2)
+      z-index: 200
+      margin-top: 30px
+    &:nth-child(3)
+      z-index: 100
+      margin-top: 60px
+      margin-bottom: 60px
+
+.scheme
+  display: block
+  margin: 0 auto
+
+.schema
+  border-radius: 35px
+  display: block
+  margin: 60px auto
+
+.preview
+  display: block
+  margin: 60px auto
+  cursor: zoom-in
+
+ul
+  list-style-image: url("~@/assets/icons/check.svg")

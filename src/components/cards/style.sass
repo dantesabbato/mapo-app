@@ -1,0 +1,51 @@
+.cards
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+  column-gap: 1em
+  row-gap: 2em
+
+.card
+  min-width: auto
+  max-width: 100%
+  border-radius: 35px
+  transform: none
+  transition-property: all
+  transition-duration: 300ms
+  transition-delay: 0ms
+  transition-timing-function: ease
+  border-width: 0
+  box-shadow: inset 0px -3px 0px 0px rgb(158 122 249)
+  &:hover
+    background-color: rgba(255, 255, 255, 0)
+    transform: translate3D(0px, -5px, 0px)
+  &-body
+    text-align: center
+    height: 100%
+    display: flex
+    align-items: center
+    padding: 5vh 0 3vh 0
+  &-image
+    position: absolute
+    border-radius: 20px
+    padding: 15px
+    background-color: rgb(158, 122, 249)
+    box-shadow: 0 22px 25px -10px rgb(158 122 249)
+    top: -24px
+    left: 36px
+  &-text
+    color: #f8f9fa
+    font-family: MontserratSemiBold, sans-serif
+    font-size: .8em
+    line-height: 1.2em
+    text-transform: uppercase
+    margin: 0 auto
+  a
+    height: 100%
+    &:link
+      text-decoration: none
+    &:visited
+      text-decoration: none
+    &:hover
+      text-decoration: none
+    &:active
+      text-decoration: none
