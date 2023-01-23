@@ -1,5 +1,6 @@
 <template>
   <div id="about">
+    <div class="background"/>
     <div class="header">
       <div class="container">
         <div class="header__title">О компании</div>
@@ -30,7 +31,7 @@ export default {
       { title: "Платные образовательные услуги",       href: "/about/paid_services" },
       { title: "Обработка персональных данных",        href: "/about/personal_data" },
       { title: "Материально-техническое обеспечение",  href: "/about/logistics" },
-      { title: "Финансово-хозяйственная деятельность", href: "/about/activities" },
+      { title: "Финансовая деятельность",              href: "/about/activities" },
       { title: "Вакансии",                             href: "/about/vacancies" },
       { title: "Руководство",                          href: "/about/management" },
       { title: "Доступная среда",                      href: "/about/environment" },

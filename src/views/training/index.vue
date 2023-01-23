@@ -1,5 +1,6 @@
 <template>
   <div id="training">
+    <div class="background"/>
     <div class="header">
       <div class="container">
         <div class="header__title">Профессиональное обучение</div>

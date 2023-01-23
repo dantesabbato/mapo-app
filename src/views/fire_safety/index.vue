@@ -1,5 +1,6 @@
 <template>
   <div id="fire_safety">
+    <div class="background"/>
     <div class="header">
       <div class="container">
         <div class="header__title">Пожарная безопасность</div>

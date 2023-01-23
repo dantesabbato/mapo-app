@@ -1,5 +1,6 @@
 <template>
   <div id="education">
+    <div class="background"/>
     <div class="header">
       <div class="container">
         <div class="header__title">Профессиональное дополнительное образование</div>

@@ -160,4 +160,110 @@
       font-weight: bold
       font-size: 1.2em
   ////////////////////////////////////////////////////////////////////////////////////////////
-  
+
+  //////////////////////////////////// ABOUT ////////////////////////////////////////////////
+  #about, #education, #training, #fire_safety, #labour_protection, #contacts
+    color: black
+    .header
+      background-image: radial-gradient(at left bottom, rgb(255,255,255) -2%, rgb(255, 255, 255) 100%)
+      color: black
+      &__title
+        font-size: 3em
+    #contacts_button
+      button
+        a
+          color: black
+          font-size: 2.6em
+        &:hover
+          background-color: rgba(116, 195, 61, 1)
+          border-radius: 55px
+          opacity: 1
+          padding-bottom: 10px
+          padding-top: 10px
+          a
+            color: white
+    p, li
+      font-size: 1.4em
+    h1
+      font-size: 2.2em
+      color: black
+    h4
+      color: black
+      font-size: 1.7em
+    a
+      color: black
+    table
+      font-size: 1.3em
+    .table_programs
+      td
+        font-size: 1em
+      th
+        font-size: .7em
+      .expand_button
+        span
+          font-size: .8em
+          color: black
+    .cards
+      grid-template-columns: 1fr 1fr 1fr
+    .card
+      width: 100%!important
+      box-shadow: inset 0px -3px 0px 0px rgb(203, 203, 203)
+      &-image
+        display: none
+      &-text
+        color: black !important
+        font-size: 1.2em
+    .violet
+      color: black
+    .accordion
+      font-size: 1.5em
+      color: black
+      &-item, .expand_button
+        border: 2px solid rgb(50, 19, 128)
+      &-button
+        color: black
+        &:not(.collapsed)
+          background-color: rgb(50, 19, 128)
+        &:hover
+          background-color: rgb(50, 19, 128)
+      .expand_button
+        color: rgb(50, 19, 128)
+        &:hover
+          background-color: rgb(50, 19, 128)
+      .columns-header
+        color: rgb(50, 19, 128)
+  #education, #training
+    .header__title
+      font-size: 2em
+    #contacts_button button a
+      color: black
+      font-size: 1.5em
+  ///////////////////////////////////////////////////////////////////////////////////////////
+
+  ////////////////////////////////////// SERVICES //////////////////////////////////////////
+  .services
+    .head
+      &__title
+        border-right: none
+      &__spans
+        display: none
+    .cards
+      grid-template-columns: 1fr 1fr 1fr
+    .card
+      box-shadow: inset 0px -3px 0px 0px rgb(203, 203, 203)
+      &-image
+        display: none
+      &-text
+        color: black !important
+        font-size: 1.2em
+  //////////////////////////////////////////////////////////////////////////////////////////
+
+  ///////////////////////////////////// TAGS ///////////////////////////////////////////////
+  .tag
+    &__image
+      display: none
+    &__text
+      font-size: 1em
+      align-items: center
+  //////////////////////////////////////////////////////////////////////////////////////////
+

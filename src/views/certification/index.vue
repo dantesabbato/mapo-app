@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div id="certification">
+    <div class="background"/>
     <Construction/>
   </div>
 </template>

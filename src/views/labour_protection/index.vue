@@ -1,5 +1,6 @@
 <template>
   <div id="labour_protection">
+    <div class="background"/>
     <div class="header">
       <div class="container">
         <div class="header__title">Охрана труда</div>

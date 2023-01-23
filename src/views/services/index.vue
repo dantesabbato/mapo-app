@@ -1,21 +1,22 @@
 <template>
   <div id="services">
-      <div>
-        <!-----CARDS------>
-        <div class="services">
-          <div class="container">
-            <div class="head">
-              <div class="head__spans">
-                <span>МЫ ПРЕДЛАГАЕМ</span>
-                <span>ДЛЯ ВАС ТОЛЬКО ЛУЧШЕЕ</span>
-              </div>
-              <span class="head__title">ОСНОВНЫЕ НАПРАВЛЕНИЯ АКАДЕМИИ</span>
+    <div class="background"/>
+    <div>
+      <!-----CARDS------>
+      <div class="services">
+        <div class="container">
+          <div class="head">
+            <div class="head__spans">
+              <span>МЫ ПРЕДЛАГАЕМ</span>
+              <span>ДЛЯ ВАС ТОЛЬКО ЛУЧШЕЕ</span>
             </div>
-            <Cards :items="services"/>
+            <span class="head__title">ОСНОВНЫЕ НАПРАВЛЕНИЯ АКАДЕМИИ</span>
           </div>
+          <Cards :items="services"/>
         </div>
-        <!------------------->
       </div>
+      <!------------------->
+    </div>
   </div>
 </template>
 
