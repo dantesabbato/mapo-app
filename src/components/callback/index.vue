@@ -67,7 +67,7 @@
             <input    class="form-check-input"
                       type="checkbox"
                       id="checkAgreement"
-                      checked="checked"
+                      v-model="agreement"
             >
             <label class="form-check-label" for="checkAgreement">
               Согласен на <br><a href="/docs/soglasie_na_obrabotku_personaljnyx_dannyx.pdf" target="_blank">
@@ -75,7 +75,7 @@
             </label>
           </div>
 
-          <button class="btn btn_submit" type="submit" :disabled="disabled_submit">ОТПРАВИТЬ</button>
+          <button class="btn btn_submit" type="submit" :disabled=checkForm>ОТПРАВИТЬ</button>
         </form>
 
       </div>
@@ -94,30 +94,34 @@ export default {
     },
     data: () => ({
       callback: { name: null, phone: null, email: null, comment: null },
-      disabled_submit: true,
+      agreement: true,
       // Telegram Bot Config
       token: "5848970562:AAE4ytfBpMeSLfM3lUCktZnV9nXX0BbBfgM",
       chat_id: "258253295"
     }),
+    computed: {
+      checkForm() {
+        return !(this.callback.email || this.callback.phone && this.agreement) || this.v$.$invalid
+      }
+    },
     methods: {
       sendForm() {
-        if (this.formValidity) {
-          const name = this.callback.name ? `Имя: ${this.callback.name}` : ""
-          const phone = this.callback.phone ? `Телефон: ${this.callback.phone}` : ""
-          const email = this.callback.email ? `Email: ${this.callback.email}` : ""
-          const comment = this.callback.comment ? `Комментарий: ${this.callback.comment}` : ""
-          const message = `
-            ${name}
-            ${phone}
-            ${email}
-            ${comment}
-          `
-          this.$http.post(`https://api.telegram.org/bot${this.token}/sendMessage?chat_id=${this.chat_id}&text=${message}`)
-              .then(() => { this.closeForm() }, error => { console.log(error) })
-        }
+        const name = this.callback.name ? `Имя: ${this.callback.name}` : ""
+        const phone = this.callback.phone ? `Телефон: ${this.callback.phone}` : ""
+        const email = this.callback.email ? `Email: ${this.callback.email}` : ""
+        const comment = this.callback.comment ? `Комментарий: ${this.callback.comment}` : ""
+        const message = `
+          ${name}
+          ${phone}
+          ${email}
+          ${comment}
+        `
+        this.$http.post(`https://api.telegram.org/bot${this.token}/sendMessage?chat_id=${this.chat_id}&text=${message}`)
+            .then(() => { this.closeForm() }, error => { console.log(error) })
       },
       closeForm() {
         this.callback = {}
+        this.v$.$reset()
         document.getElementById("modalRequest_close-btn").click()
       }
     },
