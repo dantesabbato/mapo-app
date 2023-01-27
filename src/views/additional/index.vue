@@ -23,7 +23,7 @@ export default {
   data: () => ({
     subservices: [
       { title: "Профессиональная<br>переподготовка", href: "/additional/retraining" },
-      { title: "Повышение<br>классификации",         href: "/additional/advanced" }
+      { title: "Повышение<br>квалификации",         href: "/additional/advanced" }
     ]
   })
 }

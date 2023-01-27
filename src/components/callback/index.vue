@@ -94,7 +94,7 @@ export default {
     },
     data: () => ({
       callback: { name: null, phone: null, email: null, comment: null },
-      disabled_submit: false,
+      disabled_submit: true,
       // Telegram Bot Config
       token: "5848970562:AAE4ytfBpMeSLfM3lUCktZnV9nXX0BbBfgM",
       chat_id: "258253295"
