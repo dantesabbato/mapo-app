@@ -11,6 +11,7 @@
         <button type="button"
                 class="btn btn_close"
                 data-bs-dismiss="modal"
+                id="modalRequest_close-btn"
                 aria-label="Close"
         >
           <i class="bi bi-x-lg"/>
@@ -18,14 +19,17 @@
 
         <div class="modal-title">ОСТАВИТЬ ЗАЯВКУ</div>
 
-        <form @submit.prevent="sendForm">
+        <form @submit.prevent="sendForm" method="POST">
           <div class="form-floating">
             <input    class="form-control"
                       id="floatingName"
-                      v-model="callback.name"
+                      v-model="v$.callback.name.$model"
                       placeholder="Ваше имя"
             >
             <label for="floatingName">Ваше имя</label>
+          </div>
+          <div class="input-errors" v-for="(error, index) of v$.callback.name.$errors" :key="index">
+            <div class="error-msg">{{ error.$message }}</div>
           </div>
 
           <div class="form-floating">
@@ -40,10 +44,13 @@
           <div class="form-floating">
             <input    class="form-control"
                       id="floatingEmail"
-                      v-model="callback.email"
+                      v-model="v$.callback.email.$model"
                       placeholder="Email"
             >
             <label for="floatingEmail">Email</label>
+          </div>
+          <div class="input-errors" v-for="(error, index) of v$.callback.email.$errors" :key="index">
+            <div class="error-msg">{{ error.$message }}</div>
           </div>
 
           <div class="form-floating">
@@ -68,7 +75,7 @@
             </label>
           </div>
 
-          <button class="btn btn_submit" type="submit">ОТПРАВИТЬ</button>
+          <button class="btn btn_submit" type="submit" :disabled="disabled_submit">ОТПРАВИТЬ</button>
         </form>
 
       </div>
@@ -77,12 +84,51 @@
 </template>
 
 <script>
-  export default {
+import useVuelidate from "@vuelidate/core"
+import { required, email } from "@vuelidate/validators"
+
+export default {
     name: "Callback",
+    setup () {
+      return { v$: useVuelidate() }
+    },
     data: () => ({
-      callback: { name: null, phone: null, email: null }
+      callback: { name: null, phone: null, email: null, comment: null },
+      disabled_submit: false,
+      // Telegram Bot Config
+      token: "5848970562:AAE4ytfBpMeSLfM3lUCktZnV9nXX0BbBfgM",
+      chat_id: "258253295"
     }),
-    methods: { sendForm() {} }
+    methods: {
+      sendForm() {
+        if (this.formValidity) {
+          const name = this.callback.name ? `Имя: ${this.callback.name}` : ""
+          const phone = this.callback.phone ? `Телефон: ${this.callback.phone}` : ""
+          const email = this.callback.email ? `Email: ${this.callback.email}` : ""
+          const comment = this.callback.comment ? `Комментарий: ${this.callback.comment}` : ""
+          const message = `
+            ${name}
+            ${phone}
+            ${email}
+            ${comment}
+          `
+          this.$http.post(`https://api.telegram.org/bot${this.token}/sendMessage?chat_id=${this.chat_id}&text=${message}`)
+              .then(() => { this.closeForm() }, error => { console.log(error) })
+        }
+      },
+      closeForm() {
+        this.callback = {}
+        document.getElementById("modalRequest_close-btn").click()
+      }
+    },
+    validations() {
+      return {
+        callback: {
+          name: { required },
+          email: { email }
+        }
+      }
+    }
   }
 </script>
 

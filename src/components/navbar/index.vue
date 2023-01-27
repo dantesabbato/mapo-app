@@ -58,7 +58,7 @@
         { title: "Главная",    href: "/" },
         { title: "О компании", href: "/about",
           dropdown: [
-            { title: "Основные ведения",                            href: "/about/basic_information" },
+            { title: "Основные сведения",                            href: "/about/basic_information" },
             { title: "Структура и органы управления",               href: "/about/structure" },
             { title: "Документы, лицензии и аккредитация",          href: "/about/documents" },
             { title: "Образование",                                 href: "/services" },
@@ -79,7 +79,7 @@
             { title: "Дополнительное профессиональное образование", href: "/additional",
               dropdown: [
                 { title: "Профессиональная переподготовка", href: "/additional/retraining" },
-                { title: "Повышение классификации",         href: "/additional/advanced" }
+                { title: "Повышение квалификации",         href: "/additional/advanced" }
               ]
             },
             { title: "Обучение рабочих и служащих",                 href: "/training",

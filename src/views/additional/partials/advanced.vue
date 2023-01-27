@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>Программы повышения классификации</h3>
+    <h3>Программы повышения квалификации</h3>
 
     <div class="accordion" id="accordion_programs">
       <div v-for="(group, index) in programs.sort((a, b) => a.name.localeCompare(b.name))"
