@@ -1,41 +1,7 @@
 <template>
   <nav id="navbar" class="navbar navbar-expand-lg shadow fixed-top">
-    <button class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarToggler"
-            aria-controls="navbarToggle"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarToggler">
-      <ul class="navbar-nav container">
-        <li v-for="(item, i) in navbar"
-            :class="['nav-item', item.dropdown ? 'dropdown' : '']"
-            :key="i"
-        >
-          <router-link :to="item.href" class="nav-link">{{ item.title }}</router-link>
-          <ul v-if="item.dropdown" class="dropdown-menu">
-            <li v-for="(subitem, j) in item.dropdown"
-                :class="['nav-subitem', subitem.dropdown ? 'dropdown' : '']"
-                :key="j"
-            >
-              <router-link :to="subitem.href" class="dropdown-item">
-                {{ subitem.title }}<i v-if="subitem.dropdown" class="bi bi-caret-right-fill"></i>
-              </router-link>
-              <ul v-if="subitem.dropdown" class="dropdown-submenu">
-                <li v-for="(subsubitem, k) in subitem.dropdown" :key="k">
-                  <router-link :to="subsubitem.href" class="dropdown-item">{{ subsubitem.title }}</router-link>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a target="_blank" class="nav-link" :href="portal_do">ПОРТАЛ ДО</a>
-        </li>
+    <div class="container">
+      <ul class="navbar-nav nav-viv">
         <li class="nav-item">
           <button :class="['btn', 'viv_button', isVIV ? 'btn-warning' : 'btn-dark', { 'viv_button-active': isVIV }]"
                   @click="toggleVersion"
@@ -45,6 +11,41 @@
           </button>
         </li>
       </ul>
+      <button class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarToggler"
+              aria-controls="navbarToggle"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse" id="navbarToggler">
+        <ul class="navbar-nav container">
+          <li v-for="(item, i) in navbar"
+              :class="['nav-item', item.dropdown ? 'dropdown' : '']"
+              :key="i"
+          >
+            <router-link :to="item.href" class="nav-link">{{ item.title }}</router-link>
+            <ul v-if="item.dropdown" class="dropdown-menu">
+              <li v-for="(subitem, j) in item.dropdown"
+                  :class="['nav-subitem', subitem.dropdown ? 'dropdown' : '']"
+                  :key="j"
+              >
+                <router-link :to="subitem.href" class="dropdown-item">
+                  {{ subitem.title }}<i v-if="subitem.dropdown" class="bi bi-caret-right-fill"></i>
+                </router-link>
+                <ul v-if="subitem.dropdown" class="dropdown-submenu">
+                  <li v-for="(subsubitem, k) in subitem.dropdown" :key="k">
+                    <router-link :to="subsubitem.href" class="dropdown-item">{{ subsubitem.title }}</router-link>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 </template>
@@ -120,4 +121,7 @@
   }
 </script>
 
-<style lang="sass">@import "style"</style>
+<style lang="sass">
+@import "style"
+@import "style.mobile"
+</style>

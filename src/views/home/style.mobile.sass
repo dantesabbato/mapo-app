@@ -1,0 +1,60 @@
+@media all and (max-width: 500px)
+  .banner__up
+    flex-flow: column
+    align-items: center
+    margin-bottom: 0
+  .banner__down
+    height: auto
+    .block__middle
+      display: none
+      font-size: 2rem
+      line-height: 3rem
+  .banner_logo
+    justify-content: center
+    .banner_title
+      font-size: 2rem
+      width: 45%
+      line-height: 2.5rem
+      text-align: center
+  .banner_buttons
+    margin: 2rem 0 0 0
+
+  .cards
+    grid-template-columns: 1fr 1fr
+    .card
+      .card-image
+        display: none
+      .card-body
+        padding: 2vh 0 2vh 0
+    .card:last-child
+      grid-column-start: 1
+      grid-column-end: span 2
+
+  .about
+    img
+      display: none
+
+  .feedback
+    .container
+      flex-direction: column
+      padding-top: 3rem
+    &__right
+      margin-left: 0
+      margin-top: 2rem
+      width: auto
+    &__left
+      display: flex
+      flex-direction: column
+      img
+        margin-right: 0
+        margin-bottom: 2rem
+      &-words
+        border-left: none
+        display: flex
+        flex-direction: column
+        text-align: center
+        padding-left: 0
+        span
+          &.first
+            display: block
+
