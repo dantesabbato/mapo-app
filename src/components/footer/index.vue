@@ -1,8 +1,7 @@
 <template>
   <div id="footer">
     <div class="contacts">
-      <YandexMap style="height: 40vh; width: 100%"
-                 class="container"
+      <YandexMap class="container"
                  :coordinates="[55.680560, 37.633604]"
                  :zoom="15.4"
                  :controls="['zoomControl', 'fullscreenControl', 'routeEditor', 'geolocationControl']"

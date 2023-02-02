@@ -16,18 +16,16 @@
               data-bs-toggle="collapse"
               data-bs-target="#navbarToggler"
               aria-controls="navbarToggle"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="navbar-collapse collapse" id="navbarToggler">
+      <div class="navbar-collapse collapse" id="navbarToggler" :key="$route.path">
         <ul class="navbar-nav container">
           <li v-for="(item, i) in navbar"
               :class="['nav-item', item.dropdown ? 'dropdown' : '']"
               :key="i"
           >
-            <router-link :to="item.href" class="nav-link">{{ item.title }}</router-link>
+            <router-link :to="item.href" class="nav-link" @click="closeNavbar">{{ item.title }}</router-link>
             <ul v-if="item.dropdown" class="dropdown-menu">
               <li v-for="(subitem, j) in item.dropdown"
                   :class="['nav-subitem', subitem.dropdown ? 'dropdown' : '']"
@@ -113,7 +111,7 @@
       isVIV: false
     }),
     methods: {
-      toggleVersion () {
+      toggleVersion() {
         this.isVIV = !this.isVIV
         this.$emit("toggleVersion", this.isVIV)
       }

@@ -44,5 +44,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="sass">
+@import "style"
+@import "style.mobile"
 </style>
