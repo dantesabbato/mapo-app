@@ -6,7 +6,7 @@
       <div class="banner">
         <div class="banner__up">
           <div class="banner_logo">
-            <div class="banner_image"><img :src="logo" height="150"></div>
+            <img :src="logo" height="150">
             <div class="banner_title d-none">Межрегиональная академия<br>профессионального обучения</div>
             <div class="banner_title">АНО ДПО «МАПО»</div>
           </div>
@@ -144,7 +144,7 @@ export default {
   name: "Home",
   components: { Cards, ContactsButton },
   data: () => ({
-    logo: require("@/assets/images/logos/logo_2.svg"),
+    logo: require("@/assets/images/logos/logo_2.png"),
     services: [
       { title: "Дополнительное профессиональное образование",   href: "/additional" },
       { title: "Обучение<br>рабочих и служащих",                   href: "/training" },
