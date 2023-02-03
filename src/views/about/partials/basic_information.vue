@@ -32,7 +32,6 @@
       <img v-for="n in 3"
            :key="n"
            :src="require(`/public/docs/about/previews/Выписка ЕГРЮЛ МАПО ${n}.png`)"
-           height="450"
            class="shadow"
       >
     </a>

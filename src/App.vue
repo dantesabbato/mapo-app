@@ -24,6 +24,7 @@ export default {
 <style lang="sass">
 @import "assets/styles/fonts"
 @import "assets/styles/elements"
+@import "assets/styles/element.mobile"
 @import "assets/styles/colours"
 @import "assets/styles/viv"
 

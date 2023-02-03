@@ -17,7 +17,7 @@
         Ст.29-ч.2 Федерального закона №-273 "Об образовании в Российской Федерации"
       </li>
     </ul>
-    <img class="schema" src="../images/structure.png" width="1000">
+    <img class="schema" src="../images/structure.png">
   </div>
 </template>
 

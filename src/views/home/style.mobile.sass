@@ -1,4 +1,8 @@
 @media all and (max-width: 500px)
+  .banner
+    height: auto
+    padding-top: 3rem
+    padding-bottom: 3rem
   .banner__up
     flex-flow: column
     align-items: center
@@ -20,17 +24,15 @@
     margin: 2rem 0 0 0
 
   .cards
-    grid-template-columns: 1fr 1fr
+    grid-template-columns: 1fr
     .card
       .card-image
         display: none
       .card-body
         padding: 2vh 0 2vh 0
-    .card:last-child
-      grid-column-start: 1
-      grid-column-end: span 2
-
   .about
+    padding-bottom: 3rem
+    padding-top: 3rem
     img
       display: none
 

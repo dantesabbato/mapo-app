@@ -25,7 +25,7 @@
               :class="['nav-item', item.dropdown ? 'dropdown' : '']"
               :key="i"
           >
-            <router-link :to="item.href" class="nav-link" @click="closeNavbar">{{ item.title }}</router-link>
+            <router-link :to="item.href" class="nav-link">{{ item.title }}</router-link>
             <ul v-if="item.dropdown" class="dropdown-menu">
               <li v-for="(subitem, j) in item.dropdown"
                   :class="['nav-subitem', subitem.dropdown ? 'dropdown' : '']"
