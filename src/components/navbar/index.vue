@@ -42,6 +42,9 @@
               </li>
             </ul>
           </li>
+          <li class="nav-item">
+            <a target="_blank" class="nav-link" :href="portal_do">ПОРТАЛ ДО</a>
+          </li>
         </ul>
       </div>
     </div>

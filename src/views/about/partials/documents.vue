@@ -20,7 +20,7 @@
     <p>
       <b>Реквизиты АНО ДПО "МАПО":</b>
     </p>
-    <table class="table table-borderless table_entries">
+    <table class="table table-borderless table_entries table_desktop">
       <tbody>
         <tr><th>ИНН</th><td>9724053998</td><th>Расчетный счет</th><td>40703810738000019026</td></tr>
         <tr><th>КПП</th><td>772401001</td><th>Банк</th><td>ПАО СБЕРБАНК</td></tr>
@@ -30,6 +30,22 @@
           <th>Директор</th><td>Ортинова Анастасия Николаевна</td><th>Юридический адрес</th>
           <td>115230, г. Москва, 1-й Нагатинский Проезд, д. 10, стр. 1, этаж 6, помещ. XXXIII</td>
         </tr>
+      </tbody>
+    </table>
+    <table class="table table-borderless table_entries table_mobile d-none">
+      <tbody>
+      <tr><th>ИНН</th><td>9724053998</td></tr>
+      <tr><th>Расчетный счет</th><td>40703810738000019026</td></tr>
+      <tr><th>КПП</th><td>772401001</td></tr>
+      <tr><th>Банк</th><td>ПАО СБЕРБАНК</td></tr>
+      <tr><th>ОГРН</th><td>1217700339340</td></tr>
+      <tr><th>БИК</th><td>044525225</td></tr>
+      <tr><th>ОКПО</th><td>53654013</td></tr>
+      <tr><th>Корр. счет</th><td>30101810400000000225</td></tr>
+      <tr>
+        <th>Директор</th><td>Ортинова Анастасия Николаевна</td></tr>
+        <tr><th>Юридический адрес</th><td>115230, г. Москва, 1-й Нагатинский Проезд, д. 10, стр. 1, этаж 6, помещ. XXXIII</td>
+      </tr>
       </tbody>
     </table>
     <Carousel :docs="docs" :path="docs_path"/>

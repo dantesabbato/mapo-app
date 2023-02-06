@@ -61,7 +61,7 @@
       <li>Свидетельство о смене ФИО (если ФИО в паспорте отличается от ФИО в дипломе)</li>
     </ul>
 
-    <img :src="require('./images/schema.png')" height="400" class="schema">
+    <img :src="require('./images/schema.png')" class="schema">
   </div>
 </template>
 
