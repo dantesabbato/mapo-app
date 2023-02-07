@@ -44,7 +44,7 @@
       <u class="violet">16 часов</u>
     </p>
 
-    <img :src="require('../images/first_aid_training.png')" height="300" class="scheme">
+    <img :src="require('../images/first_aid_training.png')" class="scheme">
 
     <p>
       Программа обучения по оказанию первой помощи пострадавшим обязательно должна содержать практическую часть,

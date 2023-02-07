@@ -11,7 +11,7 @@
       <b class="violet">ИНСТРУКТАЖИ</b> по охране труда.
     </p>
 
-    <img :src="require('../images/traineeship.png')" height="500" class="schema">
+    <img :src="require('../images/traineeship.png')" class="schema">
 
     <p>
       Работодатель сам устанавливает Перечень должностей и профессий сотрудников, которым необходима

@@ -7,7 +7,7 @@
       </b>
     </p>
 
-    <img :src="require('../images/briefing.png')" height="600" class="schema">
+    <img :src="require('../images/briefing.png')" class="schema">
 
     <p>
       <b class="violet">

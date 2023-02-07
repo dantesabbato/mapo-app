@@ -125,7 +125,7 @@
       повышение его квалификации:
     </p>
 
-    <img :src="require('../images/credentials_1.jpg')" class="schema">
+    <img :src="require('../images/credentials_1.jpg')" class="picture">
   </div>
 </template>
 

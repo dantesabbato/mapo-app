@@ -1,13 +1,13 @@
 <template>
   <div id="management">
-    <table class="table table-borderless">
+    <table class="table table-borderless table_desktop">
       <thead>
         <tr>
-          <th>№<br>п/п</th>
-          <th>Должность</th>
-          <th>Фамилия Имя Отчество</th>
-          <th>Стаж работы</th>
-          <th>Контактные данные</th>
+          <th v-html="header.number"/>
+          <th v-html="header.post"/>
+          <th v-html="header.name"/>
+          <th v-html="header.experience"/>
+          <th v-html="header.contacts"/>
         </tr>
       </thead>
       <tbody>
@@ -20,12 +20,25 @@
         </tr>
       </tbody>
     </table>
+
+    <table class="table table-borderless table_mobile d-none">
+      <tbody>
+        <template v-for="(manager, index) in management" :key="manager">
+          <tr><th v-html="header.number"/><td>{{ index }}</td></tr>
+          <tr><th v-html="header.post"/><td v-html="manager.post"/></tr>
+          <tr><th v-html="header.name"/><td v-html="manager.name"/></tr>
+          <tr><th v-html="header.experience"/><td v-html="manager.experience"/></tr>
+          <tr><th v-html="header.contacts"/><td v-html="manager.contacts"/></tr>
+        </template>
+      </tbody>
+    </table>
   </div>
 </template>
 
 <script>
 export default {
   data: () => ({
+    header: { number: "№<br>п/п", post: "Должность", name: "Фамилия Имя Отчество", experience: "Стаж работы", contacts: "Контактные данные" },
     management: [
       { post: "Директор", name: "Ортинова Анастасия Николаевна", experience: "Руководящий стаж 7 лет", contacts: "Тел. +7(495) 698-61-00<br>e-mail: oan@sgcert.ru" },
       { post: "Заместитель директора по Учебно-методической работе", name: "Озерова Ирина Васильевна", experience: "Не прерывный стаж 7 лет", contacts: "Тел. +7(495) 698-61-00<br>e-mail: oiv@sgcert.ru" },

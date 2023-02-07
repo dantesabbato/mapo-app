@@ -40,7 +40,7 @@
       право её обладателю заниматься уже новой профессиональной деятельностью.
     </p>
 
-    <img :src="require('../images/credentials_2.png')" class="scheme">
+    <img :src="require('../images/credentials_2.png')" class="picture">
   </div>
 </template>
 

@@ -10,7 +10,7 @@
       разделов ФЗ-№273 - Об образовании в РФ.
     </p>
 
-    <img :src="require('./images/schema_1.png')" class="schema" height="300">
+    <img :src="require('./images/schema_1.png')" class="picture" >
 
     <p>
       Профессиональное обучение по различным программам <b class="violet">ПРОФЕССИОНАЛЬНОЙ ПОДГОТОВКИ</b> по профессиям
@@ -81,7 +81,7 @@
 
     <h3>АЛГОРИТМ ПРОФЕССИОНАЛЬНОГО ОБУЧЕНИЯ</h3>
 
-    <img :src="require('./images/main.png')" height="300" class="scheme">
+    <img :src="require('./images/main.png')" class="scheme">
   </div>
 </template>
 

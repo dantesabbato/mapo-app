@@ -20,7 +20,7 @@
       в рамках обучения требованиям охраны труда.
     </p>
 
-    <img :src="require('../images/protection_training.png')" height="300" class="schema">
+    <img :src="require('../images/protection_training.png')" class="schema">
 
     <p>
       Программа обучения по использованию/применению СИЗ (средств индивидуальной защиты) обязательно должна

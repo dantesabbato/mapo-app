@@ -55,7 +55,7 @@
       Программы по категориям лиц, которым нужно обучение по пожарной безопасности в виде повышения квалификации:
     </b></p>
 
-    <img :src="require('../images/Таблица.png')" height="700" class="scheme">
+    <img :src="require('../images/Таблица.png')" class="scheme">
   </div>
 </template>
 

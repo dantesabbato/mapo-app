@@ -46,7 +46,7 @@
       Схематично обучение выглядит так:
     </p>
 
-    <img :src="require('./images/labour_protection-1.png')" height="600" class="schema">
+    <img :src="require('./images/labour_protection-1.png')" class="schema">
 
     <p>Полный перечень видов обучения по охране труда:</p>
 
