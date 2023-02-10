@@ -13,4 +13,7 @@
 
 <script>export default { name: "Cards", props: { items: Array } }</script>
 
-<style lang="sass">@import "style"</style>
+<style lang="sass">
+@import "style"
+@import "style.mobile"
+</style>
