@@ -95,9 +95,8 @@ export default {
     data: () => ({
       callback: { name: null, phone: null, email: null, comment: null },
       agreement: true,
-      // Telegram Bot Config
       token: "5848970562:AAE4ytfBpMeSLfM3lUCktZnV9nXX0BbBfgM",
-      chat_id: "258253295"
+      chat_id: "-1001738212777"
     }),
     computed: {
       checkForm() {
@@ -111,6 +110,7 @@ export default {
         const email = this.callback.email ? `Email: ${this.callback.email}` : ""
         const comment = this.callback.comment ? `Комментарий: ${this.callback.comment}` : ""
         const message = `
+          Заявка на обратный звонок
           ${name}
           ${phone}
           ${email}
@@ -137,5 +137,8 @@ export default {
 </script>
 
 <style lang="sass">
-  @import "style"
+@import "style"
+@import "style.mobile"
+@import "style.viv"
+@import "style.viv-mobile"
 </style>

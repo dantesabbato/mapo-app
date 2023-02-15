@@ -16,4 +16,6 @@
 <style lang="sass">
 @import "style"
 @import "style.mobile"
+@import "style.viv"
+@import "style.viv-mobile"
 </style>

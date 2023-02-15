@@ -19,4 +19,9 @@ export default {
 }
 </script>
 
-<style lang="sass">@import "style"</style>
+<style lang="sass">
+@import "style"
+@import "style.mobile"
+@import "style.viv"
+@import "style.viv-mobile"
+</style>
