@@ -88,9 +88,9 @@ export default {
       },
       {
         name: "Специалист по пожарной профилактике",
-        code: "ПП-149(с)",
+        code: "ПП-149(н)",
         hours: "256",
-        curriculum: "ПП-149(с)",
+        curriculum: "ПП-149(н)",
         diploma: "Диплом"
       },
       {
