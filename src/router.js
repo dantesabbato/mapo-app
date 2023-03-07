@@ -35,7 +35,7 @@ const routes = [
     children: [
       { path: "",                      name: "Дополнительное профессиональное образование",              component: () => import("./views/additional/main") },
       { path: "retraining",            name: "Профессиональная переподготовка",                          component: () => import("./views/additional/partials/retraining") },
-      { path: "advanced",              name: "Повышение классификации",                                  component: () => import("./views/additional/partials/advanced") }
+      { path: "advanced",              name: "Повышение квалификации",                                  component: () => import("./views/additional/partials/advanced") }
     ]
   },
   { path: "/labour_protection",                                       component: () => import("./views/labour_protection"),
@@ -53,7 +53,7 @@ const routes = [
     children: [
       { path: "",                      name: "Пожарная безопасность",                                    component: () => import("./views/fire_safety/main")  },
       { path: "retraining",            name: "Профессиональная переподготовка по пожарной безопасности", component: () => import("./views/fire_safety/partials/retraining") },
-      { path: "advanced",              name: "Повышение классификации по пожарной безопасности",         component: () => import("./views/fire_safety/partials/advanced") }
+      { path: "advanced",              name: "Повышение квалификации по пожарной безопасности",         component: () => import("./views/fire_safety/partials/advanced") }
     ]
   },
   { path: "/certification",       name: "Аттестация",                 component: () => import("./views/certification") }

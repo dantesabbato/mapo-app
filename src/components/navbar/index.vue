@@ -93,7 +93,7 @@
             { title: "Пожарная безопасность",                       href: "/fire_safety",
               dropdown: [
                 { title: "Профессиональная переподготовка", href: "/fire_safety/retraining" },
-                { title: "Повышение классификации",         href: "/fire_safety/advanced" }
+                { title: "Повышение квалификации",         href: "/fire_safety/advanced" }
               ]
             },
             { title: "Охрана труда",                                href: "/labour_protection",
