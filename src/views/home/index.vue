@@ -110,27 +110,23 @@
       <div class="container">
         <h1>Отзывы о нас</h1>
         <h4>Нам важно ваше мнение, мы примем во внимание каждый отзыв</h4>
-        <div class="carousel">
-          <div class="carousel__track">
-            <div v-for="(comment, index) in comments" class="comment_card" :key="index">
-              <div class="comment_card__body">
-                <div class="comment_card__avatar">
-                  <span><img :src="require('@/assets/icons/quote.svg')"></span>
-                  <img :src="comment.photo">
-                </div>
-                <div class="comment_card__content">{{ comment.text }}</div>
-              </div>
-              <div class="comment_card__footer">
-                <span>{{ comment.name }}</span>
-                <span>{{ comment.company }}</span>
-              </div>
-            </div>
-          </div>
-          <div class="carousel__control">
-            <button><i class="bi bi-arrow-left-short"></i></button>
-            <button><i class="bi bi-arrow-right-short"></i></button>
-          </div>
-        </div>
+<!--        <div class="carousel">-->
+<!--          <div class="carousel__track">-->
+<!--            <div v-for="(comment, index) in comments" class="comment_card" :key="index">-->
+<!--              <div class="comment_card__body">-->
+<!--                <img :src="comment.img">-->
+<!--              </div>-->
+<!--              <div class="comment_card__footer">-->
+<!--                <span>{{ comment.name }}</span>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="carousel__control">-->
+<!--            <button><i class="bi bi-arrow-left-short"></i></button>-->
+<!--            <button><i class="bi bi-arrow-right-short"></i></button>-->
+<!--          </div>-->
+<!--        </div>-->
+          <Carousel :docs="docs" :path="docs_path" :type="doc_type"/>
       </div>
     </div>
     <!------------------->
@@ -139,10 +135,11 @@
 
 <script>
 import Cards from "@/components/cards"
-import ContactsButton from "@/components/contacts_button";
+import ContactsButton from "@/components/contacts_button"
+import Carousel from "@/components/carousel"
 export default {
   name: "Home",
-  components: { Cards, ContactsButton },
+  components: { Cards, ContactsButton, Carousel },
   data: () => ({
     logo: require("@/assets/images/logos/logo_2.png"),
     services: [
@@ -152,16 +149,11 @@ export default {
       { title: "Охрана<br>труда",                               href: "/labour_protection" },
       { title: "Аттестация и<br>предаттестационная подготовка", href: "/certification" }
     ],
-    comments: [
-      {
-        name: "Юрьев Григорий Александрович",
-        company: "ЗАО «ReRoom»",
-        text: "Обучение просто супер. Ребята молодцы, делают свою работу на высоком уровне. " +
-              "цены вполне доступные. Часто проводятся скидки, акции, что особо радует :) " +
-              "Буду рекомендовать всем друзьям и близким.",
-        photo: require("./partners/1.png")
-      }
-    ]
+    docs: [
+      "ЗАО «Мясищев-Техсервис»", "ММБИ РАН", "ООО «ВТ-металл»", "ООО «Золотой век»", "ООО «Родияр Технолоджи»",
+      "ООО «Сигнал-Безопасность»", "ООО «Сигнал-Безопасность Плюс»", "СК «ВОССТРАХ»", "ФГУП «РТРС» филиал «МРЦ»"
+    ],
+    docs_path: "/docs/comments/", doc_type: "png"
   }),
   computed: {
     getTime() {

@@ -48,7 +48,7 @@
       </tr>
       </tbody>
     </table>
-    <Carousel :docs="docs" :path="docs_path"/>
+    <Carousel :docs="docs" :path="docs_path" type="pdf"/>
   </div>
 </template>
 

@@ -1,8 +1,8 @@
 <template>
   <Carousel :settings="settings" :breakpoints="breakpoints">
     <Slide v-for="doc in docs" :key="doc">
-      <a :href="`/docs/about/${doc}.pdf`" target="_blank">
-        <img :src="`/docs/about/previews/${doc}.png`"
+      <a :href="`${path}${doc}.${type}`" target="_blank">
+        <img :src="`${path}previews/${doc}.png`"
              height="300"
              class="shadow"
         >
@@ -20,7 +20,7 @@
 import { Carousel, Navigation, Slide } from "vue3-carousel"
 export default {
   components: { Carousel, Slide, Navigation },
-  props: { docs: Array, path: String },
+  props: { docs: Array, path: String, type: String },
   data: () => ({
     settings: { itemsToShow: 1, snapAlign: "center" },
     breakpoints: { 700: { itemsToShow: 2.5,  snapAlign: "center" }, 1024: { itemsToShow: 5, snapAlign: "start" } }
