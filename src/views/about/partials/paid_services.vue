@@ -32,7 +32,7 @@
       <li>Порядок расчета стоимости образовательных услуг</li>
       <li>Образец Договора об оказании платных образовательных услуг</li>
     </ul>
-    <Carousel :docs="docs" :path="docs_path"/>
+    <Carousel :docs="docs" :path="docs_path" type="pdf"/>
   </div>
 </template>
 <script>
