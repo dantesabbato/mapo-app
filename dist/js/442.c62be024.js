@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkmapo_app"]=self["webpackChunkmapo_app"]||[]).push([[442],{6442:function(n,u,r){r.r(u),r.d(u,{default:function(){return s}});var t=r(3396);const a={id:"notfound"},e=(0,t._)("h1",null,"404",-1),o=[e];function p(n,u){return(0,t.wg)(),(0,t.iD)("div",a,o)}var c=r(89);const f={},i=(0,c.Z)(f,[["render",p]]);var s=i}}]);
+//# sourceMappingURL=442.c62be024.js.map

@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkmapo_app"]=self["webpackChunkmapo_app"]||[]).push([[636],{9636:function(n,e,a){a.r(e),a.d(e,{default:function(){return h}});var c=a(3396);const s={id:"scheme"},r=(0,c._)("img",{src:"/docs/about/МАПО.png",height:"800",class:"schema"},null,-1),t=[r];function u(n,e){return(0,c.wg)(),(0,c.iD)("div",s,t)}var p=a(89);const i={},o=(0,p.Z)(i,[["render",u]]);var h=o}}]);
+//# sourceMappingURL=636.e7d42378.js.map
