@@ -2,16 +2,16 @@
   <div id="footer">
     <div class="contacts">
       <YandexMap class="container"
-                 :coordinates="[55.680560, 37.633604]"
+                 :coordinates="[55.734851, 37.665138]"
                  :zoom="15.4"
                  :controls="['zoomControl', 'fullscreenControl', 'routeEditor', 'geolocationControl']"
                  :behaviors="['disable', 'drag']"
       >
-        <YandexMarker :coordinates="[55.678362, 37.631757]" :icon="marker_icon"/>
+        <YandexMarker :coordinates="[55.734851, 37.665138]" :icon="marker_icon"/>
       </YandexMap>
       <div class="contacts_info container">
         <button data-bs-toggle="modal" data-bs-target="#modalRequest">ОТПРАВИТЬ ЗАЯВКУ</button>
-        <span><img :src="require('@/assets/icons/geo-white.svg')">г. Москва, проезд 1-й Нагатинский, д. 10, стр. 1</span>
+        <span><img :src="require('@/assets/icons/geo-white.svg')">Москва, ул. Марксистская, д. 34, к. 8, пом. 1/1</span>
         <a href="tel:+74956986100"><img :src="require('@/assets/icons/phone-white.svg')">+7(495) 698-61-00</a>
       </div>
     </div>
@@ -44,7 +44,7 @@
         </div>
         <div class="menu__down">
           <a href="/" class="text-decoration-none"><img :src="logo" height="70" width="70"></a>
-          <p>Copyright © 2022-2023 АНО ДПО "Межрегиональная академия профессионального обучения"</p>
+          <p>Copyright © 2022-2024 АНО ДПО "Межрегиональная академия профессионального обучения"</p>
         </div>
       </div>
     </div>
