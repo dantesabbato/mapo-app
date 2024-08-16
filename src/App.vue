@@ -6,6 +6,7 @@
     <Chat/>
     <router-view/>
     <Footer/>
+    <CookieBanner/>
   </div>
 </template>
 
@@ -15,8 +16,9 @@ import Callback from "@/components/callback"
 import Footer from "@/components/footer"
 import PhotoModal from "@/components/photo_modal"
 import Chat from "@/components/chat"
+import CookieBanner from "@/components/cookie_banner"
 export default {
-  components: { Navbar, Callback, Footer, PhotoModal, Chat },
+  components: { Navbar, Callback, Footer, PhotoModal, Chat, CookieBanner },
   data: () => ({ viv: false })
 }
 </script>

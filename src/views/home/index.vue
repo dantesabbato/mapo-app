@@ -93,7 +93,6 @@
               <input class="form-check-input"
                      type="checkbox"
                      id="checkAgreement"
-                     checked="checked"
               >
               <label>
                 Согласен на <a href="/docs/soglasie_na_obrabotku_personaljnyx_dannyx.pdf" target="_blank">
@@ -110,22 +109,6 @@
       <div class="container">
         <h1>Отзывы о нас</h1>
         <h4>Нам важно ваше мнение, мы примем во внимание каждый отзыв</h4>
-<!--        <div class="carousel">-->
-<!--          <div class="carousel__track">-->
-<!--            <div v-for="(comment, index) in comments" class="comment_card" :key="index">-->
-<!--              <div class="comment_card__body">-->
-<!--                <img :src="comment.img">-->
-<!--              </div>-->
-<!--              <div class="comment_card__footer">-->
-<!--                <span>{{ comment.name }}</span>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          <div class="carousel__control">-->
-<!--            <button><i class="bi bi-arrow-left-short"></i></button>-->
-<!--            <button><i class="bi bi-arrow-right-short"></i></button>-->
-<!--          </div>-->
-<!--        </div>-->
           <Carousel :docs="docs" :path="docs_path" :type="doc_type"/>
       </div>
     </div>
@@ -144,7 +127,7 @@ export default {
     logo: require("@/assets/images/logos/logo_2.png"),
     services: [
       { title: "Дополнительное профессиональное образование",   href: "/additional" },
-      { title: "Обучение<br>рабочих и служащих",                   href: "/training" },
+      { title: "Обучение<br>рабочих и служащих",                href: "/training" },
       { title: "Пожарная<br>безопасность",                      href: "/fire_safety" },
       { title: "Охрана<br>труда",                               href: "/labour_protection" },
       { title: "Аттестация и<br>предаттестационная подготовка", href: "/certification" }

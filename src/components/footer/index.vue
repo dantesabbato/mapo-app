@@ -32,7 +32,7 @@
             <li class="nav-item mb-2"><router-link to="/about/cooperation" class="nav-link p-0">Международное сотрудничество</router-link></li>
           </ul>
           <ul class="nav flex-column">
-            <li class="nav-item mb-2"><router-link to="/about/personal_data" class="nav-link p-0">Обработка персональных данных</router-link></li>
+            <li class="nav-item mb-2"><router-link to="/about/personal_data" class="nav-link p-0">Политика конфиденциальности</router-link></li>
             <li class="nav-item mb-2"><router-link to="/about/logistics" class="nav-link p-0">Материально-техническое обеспечение</router-link></li>
             <li class="nav-item mb-2"><router-link to="/about/activities" class="nav-link p-0">Финансово-хозяйственная деятельность</router-link></li>
           </ul>

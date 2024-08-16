@@ -29,7 +29,7 @@ export default {
       { title: "Образование",                          href: "/services" },
       { title: "Образовательные стандарты",            href: "/about/standards" },
       { title: "Платные образовательные услуги",       href: "/about/paid_services" },
-      { title: "Обработка персональных данных",        href: "/about/personal_data" },
+      { title: "Политика конфиденциальности",          href: "/about/personal_data" },
       { title: "Материально-техническое обеспечение",  href: "/about/logistics" },
       { title: "Финансовая деятельность",              href: "/about/activities" },
       { title: "Вакансии",                             href: "/about/vacancies" },

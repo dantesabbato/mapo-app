@@ -10,7 +10,7 @@ const routes = [
       { path: "documents",             name: "Документы, лицензии и аккредитации",                       component: () => import("./views/about/partials/documents") },
       { path: "standards",             name: "Образовательные стандарты",                                component: () => import("./views/about/partials/standards") },
       { path: "paid_services",         name: "Платные образовательные услуги",                           component: () => import("./views/about/partials/paid_services") },
-      { path: "personal_data",         name: "Обработка персональных данных",                            component: () => import("./views/about/partials/personal_data") },
+      { path: "personal_data",         name: "Политика конфиденциальности",                              component: () => import("./views/about/partials/personal_data") },
       { path: "logistics",             name: "Материально-техническое обеспечение",                      component: () => import("./views/about/partials/logistics") },
       { path: "activities",            name: "Финансово-хозяйственная деятельность",                     component: () => import("./views/about/partials/activities") },
       { path: "vacancies",             name: "Вакансии",                                                 component: () => import("./views/about/partials/vacancies") },
@@ -62,7 +62,25 @@ const routes = [
 const router = createRouter({
   routes,
   history: createWebHistory(process.env.BASE_URL),
-  scrollBehavior () { return { top: 0 } }
+  scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+      const element = document.querySelector(to.hash)
+      if (element) {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            const yOffset = -60
+            const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset
+            window.scrollTo({ top: y, behavior: 'smooth' })
+            resolve({ left: 0, top: y })
+          }, 300)
+        })
+      }
+    } else if (savedPosition) {
+      return savedPosition
+    } else {
+      return { top: 0 }
+    }
+  }
 })
 
 router.beforeEach((to, from, next) => {

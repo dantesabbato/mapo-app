@@ -94,7 +94,7 @@ export default {
     },
     data: () => ({
       callback: { name: null, phone: null, email: null, comment: null },
-      agreement: true,
+      agreement: false,
       token: "5848970562:AAE4ytfBpMeSLfM3lUCktZnV9nXX0BbBfgM",
       chat_id: "-1001738212777"
     }),
@@ -116,7 +116,8 @@ export default {
           ${email}
           ${comment}
         `
-        this.$http.post(`https://api.telegram.org/bot${this.token}/sendMessage?chat_id=${this.chat_id}&text=${message}`)
+        this.$http
+            .post(`https://api.telegram.org/bot${this.token}/sendMessage?chat_id=${this.chat_id}&text=${message}`)
             .then(() => { this.closeForm() }, error => { console.log(error) })
       },
       closeForm() {
